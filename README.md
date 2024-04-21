@@ -1,7 +1,7 @@
 # tinyRedis
 
 Welcome to tinyRedis, a minimalistic Redis-compatible server implementation written in Go. This project is designed to be lightweight, efficient, and fully compatible with the Redis protocol, making it suitable for educational purposes, testing, and small-scale deployments.
-
+![tinyRedis Logo](logo.png)
 ## Features
 
 - **Redis Protocol Compatibility:** Implements key features of the Redis protocol to ensure compatibility with existing Redis clients.
@@ -17,8 +17,6 @@ To install tinyRedis, clone the repository and build the project:
 git clone https://github.com/yourusername/tinyRedis.git
 cd tinyRedis
 go build .
-Running tinyRedis
-To start the server, simply run:
 ```
 ## Running tinyRedis
 To start the server, simply run:
