@@ -3,6 +3,7 @@
 
 
 Welcome to tinyRedis, a minimalistic Redis-compatible server implementation written in Go. This project is designed to be lightweight, efficient, and fully compatible with the Redis protocol, making it suitable for educational purposes, testing, and small-scale deployments.
+Please remember that tinyRedis is intended to be a learning tool, developed over a night, and as such, it may not encompass the full security features expected in a production-ready application.
 ## Features
 
 - **Redis Protocol Compatibility:** Implements key features of the Redis protocol to ensure compatibility with existing Redis clients.
@@ -31,7 +32,7 @@ Here is a simple example of setting a key and retrieving it using a Redis client
 import redis
 
 # Connect to the server
-client = redis.Redis(host='localhost', port=6379, decode_responses=True)
+client = redis.Redis(host='localhost', port=6379)
 
 # Set a key
 client.set('admin', 'robitec')
