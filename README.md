@@ -16,7 +16,7 @@ Before you begin, ensure you have Go installed on your machine. You can download
 ### Installing
 To install tinyRedis, clone the repository and build the project:
 ```bash
-git clone https://github.com/yourusername/tinyRedis.git
+git clone https://github.com/robitec97/tinyRedis.git
 cd tinyRedis
 go build .
 ```
