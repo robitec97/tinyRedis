@@ -1,7 +1,6 @@
 # tinyRedis
-
-Welcome to tinyRedis, a minimalistic Redis-compatible server implementation written in Go. This project is designed to be lightweight, efficient, and fully compatible with the Redis protocol, making it suitable for educational purposes, testing, and small-scale deployments.
 ![tinyRedis Logo](logo.png)
+Welcome to tinyRedis, a minimalistic Redis-compatible server implementation written in Go. This project is designed to be lightweight, efficient, and fully compatible with the Redis protocol, making it suitable for educational purposes, testing, and small-scale deployments.
 ## Features
 
 - **Redis Protocol Compatibility:** Implements key features of the Redis protocol to ensure compatibility with existing Redis clients.
