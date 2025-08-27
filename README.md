@@ -1,47 +1,103 @@
 # tinyRedis
+![Go Version](https://img.shields.io/badge/Go-1.22+-blue)
+![Contributions](https://img.shields.io/badge/contributions-welcome-brightgreen)
+
 ![tinyRedis Logo](logo.png)
 
+**tinyRedis** is a minimalistic Redis server clone written in Go. This project is lightweight, efficient, and fully compatible with the Redis protocol, making it ideal for **educational purposes**.
 
-Welcome to tinyRedis, a minimalistic Redis-compatible server implementation written in Go. This project is designed to be lightweight, efficient, and fully compatible with the Redis protocol, making it suitable for educational purposes, testing, and small-scale deployments.
-Please remember that tinyRedis is intended to be a learning tool, developed over a night, and as such, it may not encompass the full security features expected in a production-ready application.
-## Features
+> ⚠️ **Disclaimer:** tinyRedis is intended as a learning tool. It is not production-ready and may lack advanced features and security guarantees of Redis.
 
-- **Redis Protocol Compatibility:** Implements key features of the Redis protocol to ensure compatibility with existing Redis clients.
-- **Lightweight Design:** Focused on core functionality with minimal overhead, making it fast and easy to deploy.
-- **Written in Go:** Leverages Go's concurrency model for efficient handling of multiple connections and data safety.
+---
 
-## Getting Started
+## 📖 Table of Contents
+- [Features](#-features)
+- [Getting Started](#-getting-started)
+- [Usage](#-usage)
+- [Examples](#-examples)
+- [Comparison with Redis](#-comparison-with-redis)
+- [Roadmap](#-roadmap)
+- [Contributing](#-contributing)
+- [License](#-license)
+
+---
+
+## ⚡ Features
+- **Redis Protocol Compatibility**: Works with standard Redis clients.
+- **Lightweight Design**: Core functionality with minimal overhead.
+- **Written in Go**: Uses Go's concurrency model for efficient multi-connection handling.
+- **Educational**: Great for understanding how a key-value store works internally.
+
+---
+
+## 🚀 Getting Started
+
 ### Prerequisites
-Before you begin, ensure you have Go installed on your machine. You can download and install Go from [https://golang.org/dl/](https://golang.org/dl/).
-### Installing
-To install tinyRedis, clone the repository and build the project:
+- Install [Go 1.22+](https://go.dev/dl/)
+
+### Installation
 ```bash
 git clone https://github.com/robitec97/tinyRedis.git
 cd tinyRedis
-go build .
+go run main.go
 ```
-## Running tinyRedis
-To start the server, simply run:
+
+---
+
+## 🛠 Usage
+
+Start the server:
 ```bash
-./tinyRedis
+go run main.go
 ```
-tinyRedis will listen on port 6379, you can connect to it using any standard Redis client.
-### Example usage
-Here is a simple example of setting a key and retrieving it using a Redis client in Python:
-```python
-import redis
 
-# Connect to the server
-client = redis.Redis(host='localhost', port=6379)
-
-# Set a key
-client.set('admin', 'robitec')
-
-# Get the key
-print(client.get('admin'))  # Output: robitec
+Connect with `redis-cli`:
+```bash
+redis-cli -p 6379
 ```
-## Contributing
-Contributions are welcome! Feel free to open an issue or submit a pull request.
 
+---
 
+## 📊 Examples
+```bash
+SET hello world
+OK
+GET hello
+"world"
+```
+---
 
+## 🔎 Comparison with Redis
+
+| Feature         | Redis | tinyRedis |
+|-----------------|-------|-----------|
+| SET/GET         | ✅    | ✅        |
+| DEL             | ✅    | ✅        |
+| AOF Persistence | ✅    | ✅ (basic) |
+| Pub/Sub         | ✅    | ❌        |
+| Clustering      | ✅    | ❌        |
+
+---
+
+## 🛣 Roadmap
+- [ ] Improve persistence reliability
+- [ ] Implement Pub/Sub
+- [ ] Add support for transactions
+- [ ] Add clustering support
+
+---
+
+## 🤝 Contributing
+Contributions, issues, and feature requests are welcome!
+
+1. Fork the repo
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+---
+
+## 📜 License
+This project is licensed under the Apache License 2.0.  
+You are free to use, modify, and share this project, but you must give **appropriate credit** to the original author [robitec97](https://github.com/robitec97).
